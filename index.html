@@ -64,7 +64,7 @@
         numbers.push(number);
       }
     }
-    numbers.sort();
+    numbers.sort((a,b) => a - b);
     var items = document.getElementsByClassName("item");
     for (var i = 0; i < items.length; i++) {
       items[i].innerHTML = numbers[i];
