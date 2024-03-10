@@ -49,14 +49,14 @@
 </body>
 <script>
   function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    return Math.floor(Math.random() * (max + 1));
   }
   
   function init() {
     var numbers = [];
     
     for (var i = 0; i < 6; i++) {
-      var number = getRandomInt(60);
+      var number = getRandomInt(90);
       if (numbers.includes(number)) {
         i--; break;
       } else {
