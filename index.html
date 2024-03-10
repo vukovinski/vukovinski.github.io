@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Brojevi</title>
+</head>
+<style>
+  .container {
+    display: grid;
+    row-gap: 15px;
+    column-gap: 15px;
+    grid-template-columns: 15vw 35vw 35vw 15vw;
+    grid-template-rows: 15vh 23.3vh 23.3vh 23.3vh 15vh;
+  }
+  .item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+</style>
+<body onload="init()">
+<div id="numbers-container" class="container">
+</div>
+</body>
+<script>
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  
+  function init() {
+    var numbers = [];
+    
+    for (var i = 0; i < 6; i++) {
+      var number = getRandomInt(60);
+      if (numbers.includes(number)) {
+        i--; break;
+      } else {
+        numbers.push(number);
+      }
+      var div = document.createElement("div");
+      var content = document.createTextNode(`${number}`);
+      var container = document.getElementById("numbers-container");
+      div.appendChild(content);
+      container.appendChild(div);
+    }
+  }
+</script>
+</html> 
