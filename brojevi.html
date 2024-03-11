@@ -9,11 +9,13 @@
   }
   .title {
     color: white;
-    font-size: 7.5rem;
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   .subtitle {
     color: lightgray;
-    font-size: 4.5rem;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   .container {
     display: grid;
@@ -43,7 +45,9 @@
       100px 100px 80px rgba(0, 0, 0, 0.07);
   }
   .title-container {
-    grid-column: 2 / span 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    text-align: center;
   }
 </style>
 <body onload="init()">
